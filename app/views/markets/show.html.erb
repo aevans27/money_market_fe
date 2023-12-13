@@ -1,0 +1,13 @@
+<h1>Market Detail</h1>
+<%= @market_results.name %>
+<%= @market_results.street %>
+<%= @market_results.city %>
+<%= @market_results.state %>
+<%= @market_results.zip %>
+
+<h1>Vendors at our market:</h1>
+<% @vendor_results.each do |result| %>
+<ul class="vendor_result">
+  <li><%= link_to "#{result.name}", "/vendors/#{result.id}" %></li>
+</ul>
+<% end %>

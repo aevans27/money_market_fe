@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Market viewing page and show' do 
-  it 'sets accepted to true for a user who accepts an invite' do
+  it 'gets list of all markets' do
     visit "/markets"
     
     expect(page).to have_link("More Info about 39 North Marketplace")

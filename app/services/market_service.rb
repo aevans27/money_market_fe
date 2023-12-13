@@ -12,13 +12,13 @@ class MarketService
   #   get_url("/3/search/movie?query=#{title}")
   # end
 
-  # def movie_details(id)
-  #   get_url("/3/movie/#{id}")
-  # end
+  def market_details(id)
+    get_url("http://localhost:3000/api/v0/markets/#{id}")
+  end
 
-  # def movie_cast(id)
-  #   get_url("/3/movie/#{id}/credits")
-  # end
+  def get_market_vendors(id)
+    get_url("http://localhost:3000/api/v0/markets/#{id}/vendors")
+  end
 
   # def movie_reviews(id)
   #   get_url("/3/movie/#{id}/reviews")
