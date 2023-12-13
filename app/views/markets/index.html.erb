@@ -1,0 +1,9 @@
+<h1>Market Results</h1>
+<% @results.each do |result| %>
+  <ul class="market_result">
+  <li>Name: <%= result.name %></li>
+  <li>City: <%= result.city %></li>
+  <li>State: <%= result.state %></li>
+  <li><%= link_to "More Info about #{result.name}", "/markets/#{result.id}" %></li>
+</ul>
+<% end %>
