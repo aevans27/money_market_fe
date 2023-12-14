@@ -8,3 +8,22 @@ Contact Info:
   <li>Credit Accepted: No</li>
 <% end %>
 <li>Description: <%= @results.description %></li>
+
+<%= form_with url: "/vendors/#{@results.id}", method: :get, local: true do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name  %>
+  <%= form.label :city, "City" %>
+  <%= form.text_field :city %>
+  <%= form.label :state, "State" %>
+  <%= form.text_field :state %>
+  <%= form.submit "Find Market" %>
+<% end%>
+
+<% if @search_results %>
+<h1>Market Search Results </h1>
+  <% @search_results.each do |result| %>
+    <ul class="market_search_result">
+    <li><%= link_to "#{result.name}", "/markets/#{result.name}" %></li>
+    </ul>
+  <% end %>
+<% end %>
