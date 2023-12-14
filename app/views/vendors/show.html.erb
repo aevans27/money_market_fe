@@ -1,0 +1,10 @@
+<h1><%= @results.name %></h1>
+Contact Info:
+<li>Name: <%= @results.contact_name %></li>
+<li>Phone: <%= @results.contact_phone %></li>
+<% if @results.credit_accepted %>
+  <li>Credit Accepted: Yes</li>
+<% else %>
+  <li>Credit Accepted: No</li>
+<% end %>
+<li>Description: <%= @results.description %></li>

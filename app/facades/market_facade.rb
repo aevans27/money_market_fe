@@ -12,6 +12,11 @@ class MarketFacade
     Market.new(service.market_details(id)[:data])
   end
 
+  def vendor_details(id)
+    service = MarketService.new
+    Vendor.new(service.vendor_details(id)[:data])
+  end
+
   def get_market_vendors(id)
     service = MarketService.new
     data = service.get_market_vendors(id)[:data]

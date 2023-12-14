@@ -8,9 +8,9 @@ class MarketService
     get_url('http://localhost:3000/api/v0/markets')
   end
 
-  # def search_movies(title)
-  #   get_url("/3/search/movie?query=#{title}")
-  # end
+  def vendor_details(id)
+    get_url("http://localhost:3000/api/v0/vendors/#{id}")
+  end
 
   def market_details(id)
     get_url("http://localhost:3000/api/v0/markets/#{id}")
